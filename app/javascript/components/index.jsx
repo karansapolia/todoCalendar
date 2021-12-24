@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import { Calendar, Badge } from "antd";
+import Calendar from "./Calendar";
 
 const Homepage = () => {
   return (
-    <Calendar />
-  )
-}
+    <div className="text-3xl text-blue-600 font-extrabold">
+      Hello
+      <Calendar />
+    </div>
+  );
+};
 
 ReactDOM.render(<Homepage />, document.getElementById("app"));
