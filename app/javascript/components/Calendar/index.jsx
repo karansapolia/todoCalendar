@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Calendar as Cal } from "antd";
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -11,12 +12,8 @@ const Calendar = () => {
   }, 1000);
 
   return (
-    <div className="m-4 border-rounded border-2 border-black rounded-md">
-      <p>This will be the calendar</p>
-      <p>{`Time:  ${currentDate.getHours()} : ${currentDate.getMinutes()} : ${currentDate.getSeconds()}`}</p>
-      <p>{`${currentDate.toLocaleString("default", {
-        weekday: "long",
-      })} ${currentDate.getDate()} ${currentMonth}`}</p>
+    <div className="m-4 border-rounded border-2 border-gray rounded-md p-2 px-4">
+      <Cal />
     </div>
   );
 };
